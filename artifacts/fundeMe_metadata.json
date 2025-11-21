@@ -6,10 +6,67 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "funder",
+						"type": "address"
+					}
+				],
+				"name": "addressToAmount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountFunded",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "fund",
 				"outputs": [],
 				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "funders",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "ethAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "getConversionRate",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -28,6 +85,19 @@
 			{
 				"inputs": [],
 				"name": "minimumUsd",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "val",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -75,11 +145,11 @@
 			]
 		},
 		"contracts/fundMe.sol": {
-			"keccak256": "0xa838d4024249d976bfbca68fa71d5761fae0bd84d344571cb4c30416f834c27b",
+			"keccak256": "0x0c2c9600e0fa93be39aa2f6236b1531cb4252e40f82e66f10c415e5dfa61f3ec",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://9e406da890cee4a4c7d23de4e7c3f13f14a921773aa04769583ff6e1f1264c10",
-				"dweb:/ipfs/QmafJeiybR3Y7zzd1ngiqQVwADgeLkCUGLp1HSEryjJrGi"
+				"bzz-raw://3a4022832e256fa53e2c1509ec78274f358958fb14f15bf30e15a5e7b71bbceb",
+				"dweb:/ipfs/QmWbcURBoh9dFZ5iEXMrroTLE5XkEgKmEmHTvYCQcFGH2P"
 			]
 		}
 	},
