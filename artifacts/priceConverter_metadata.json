@@ -8,51 +8,12 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "funder",
-						"type": "address"
-					}
-				],
-				"name": "addressToAmount",
-				"outputs": [
-					{
 						"internalType": "uint256",
-						"name": "amountFunded",
+						"name": "ethAmount",
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "fund",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "funders",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "minimumUsd",
+				"name": "getConversionRate",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -65,7 +26,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "val",
+				"name": "getPrice",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -90,7 +51,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/fundMe.sol": "fundeMe"
+			"contracts/priceConverter.sol": "priceConverter"
 		},
 		"evmVersion": "shanghai",
 		"libraries": {},
@@ -112,20 +73,12 @@
 				"dweb:/ipfs/QmaG6vz6W6iEUBsbHSBob5mdcitYxWjoygxREHpsJHfWrS"
 			]
 		},
-		"contracts/fundMe.sol": {
-			"keccak256": "0x11924f359c5eeaf22bc1c2fa42f2ac7c33ffbc84a8b35cf478c94e8aca967a70",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://25aed0fa49b6ec204583b9f2e66dd9ac8cbcb045c566b58f8d76301a65c2a0e0",
-				"dweb:/ipfs/QmVpDtMr1StcFWsgJHAiir64hxvv6JeGkx811uvtnSfFss"
-			]
-		},
 		"contracts/priceConverter.sol": {
-			"keccak256": "0x0d5294ca52b05c0ea1c4be6528a8abb3a9bc1f5dc5294d1812ac42adaee2da02",
+			"keccak256": "0x05c9b0d96bfd43f6643512dd8334d4960f50508003d5dc230a9c31047fdc89cf",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://748f5e4e8084555d96b3dc9746166539831e12623a47f0ac0060f61d97138c8b",
-				"dweb:/ipfs/QmUC5pAfHZ1TcBYuePs5CXkkmtaUGC7ZFSgdWCk8XW9QEB"
+				"bzz-raw://690f36f5e70ead6b4157930b2c05d6353d8309960669537ae602d23e17c84d84",
+				"dweb:/ipfs/QmdjAq2ywWF2MxkNz5PfTe68rnis3tCmmz7qecYardZpqr"
 			]
 		}
 	},
