@@ -4,25 +4,31 @@ pragma solidity 0.8.24;
 import {AggregatorV3Interface} from "@chainlink/contracts/src/v0.8/shared/interfaces/AggregatorV3Interface.sol";
 import {priceConverter} from "./priceConverter.sol";
 
+// constant,immutable <--- make the contract little bit gas efficient
+
+error notOwner();
+
 contract fundeMe {
     using priceConverter for uint256;
 
-    uint256 public minimumUsd = 5e18;
+    uint256 public constant MINIMUM_USD = 5e18;
 
     address[] public funders;
     mapping(address funder => uint256 amountFunded) public addressToAmount;
 
-    address public owner;
+    address public immutable i_owner;
 
     constructor(){
-        owner = msg.sender;
+        i_owner = msg.sender;
     }
 
     function fund() public payable {
         require(
-            msg.value.getConversionRate() >= minimumUsd,
+            msg.value.getConversionRate() >= MINIMUM_USD,
             "didn't send enough ETH"
         );                                            // 1e18 = 1 ETH = 1 * 10 ** 18 wei
+        
+      
         funders.push(msg.sender);
         addressToAmount[msg.sender] =
             addressToAmount[msg.sender] + msg.value.getConversionRate() / 1e16;
@@ -58,7 +64,8 @@ contract fundeMe {
     }
 
     modifier onlyOwner(){
-        require(msg.sender == owner,"Unauthorized! you can't withraw the funds");
+        // require(msg.sender == i_owner,"Unauthorized! you can't withraw the funds");
+        if(msg.sender != i_owner) revert notOwner();
         _;
     }
 
